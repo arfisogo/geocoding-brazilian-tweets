@@ -7,22 +7,28 @@ Developed a Python-based framework to infer geographic location of Brazilian Twi
 
 
 ## Problem
-Twitter users rarely provide structured geographic information, limiting spatial analysis of social media data.
+The lack of standardized location data in Twitter profiles makes geographic analysis unreliable. This project aims to infer user location automatically from unstructured text.
 
 ## Data
-Description of the Twitter data used, metadata fields, and preprocessing steps.
+The dataset consists of Brazilian tweets collected via Twitter API, including user profile metadata and tweet text. Most users had missing or noisy location fields.
 
 ## Methodology
-Explanation of text normalization, pattern recognition, heuristics, and geocoding logic.
+The framework combines text normalization, regular expressions, and geographic dictionaries to detect city and state mentions in tweet text and user profiles. These signals are combined through heuristic rules to infer user location.
 
 ## Results
-Main metrics and performance results.
+The approach achieved over 97% positive predictive value at municipality level when evaluated against labeled data.
 
 ## Limitations
-Known challenges and edge cases.
+Ambiguous city names, slang, and sarcasm remain challenges. The approach prioritizes precision over recall.
 
 ## Technologies
 Python, Pandas, Regex, NLP techniques, Twitter API.
 
 ## Future Improvements
-Possible extensions and improvements.
+Use embeddings / transformers
+
+Integrate interactive maps
+
+Deploy as API
+
+Apply to environmental or urban monitoring
